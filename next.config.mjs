@@ -4,7 +4,9 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: 'http',
-                hostname: 'books.google.com'
+                protocol: 'https',
+                hostname: 'books.google.com',
+                hostname: "**",
             }
         ]
     }

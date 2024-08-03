@@ -2,9 +2,11 @@
 import SearchBar from './components/SearchBar';
 import { useState } from 'react';
 import SearchResultsList from './components/SearchResultsList';
+import Link from 'next/link';
 
 
 export default function Home() {
+
 
   const [results, setResults] = useState([])
 
@@ -19,7 +21,8 @@ export default function Home() {
         {/* <SearchResultsList results={results} /> */}
       </div>
       <div className="flex items-center mt-3">
-        <button className="btn btn-primary btn-xs sm:btn-sm md:btn-md lg:btn-lg mx-auto">Go to Homepage</button>
+        {/* <button className="btn btn-primary btn-xs sm:btn-sm md:btn-md lg:btn-lg mx-auto">Go to Homepage</button> */}
+        <Link href="./home/" className="mx-auto"><button className="btn btn-primary btn-xs sm:btn-sm md:btn-md lg:btn-lg">Go to Homepage</button></Link>
       </div>
     </main>
   );

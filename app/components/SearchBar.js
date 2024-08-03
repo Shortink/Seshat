@@ -36,7 +36,7 @@ export default function SearchBar( { setResults } ) {
             {/* <input type="search" placeholder="Search Books..." className="input input-bordered input-primary w-full max-w-xs" /> */}
             
             <label className="input flex items-center gap-2 w-full">
-                <input type="search" className="grow" placeholder="Search Books..." value={input} onChange={handleInputChange} />
+                <input type="text" className="grow" placeholder="Search Books..." value={input} onChange={handleInputChange} />
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 16 16"

@@ -11,7 +11,7 @@ export default function SearchResult( {bookObj} ) {
 
 
     return(
-        <div className="mb-1 bg-cyan-200 p-3 flex overflow-hidden min-h-24" key={id}>
+        <div className="p-3 flex overflow-hidden min-h-24 border-b border-black bg-gray-500" key={id}>
             <div className="mr-3 min-w-16 min-h-20 max-h-20">
                 <Image
                     src={"/book-cover-placeholder.png"}

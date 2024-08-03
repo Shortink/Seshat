@@ -9,7 +9,7 @@ export default function Home() {
   const [results, setResults] = useState([])
 
   return(
-    <main className="h-screen bg-amber-300">
+    <main className="h-screen bg-gray-900">
       <h1>BOOKS</h1>
       <div className="mx-auto min-w-52 w-2/5 mt-60 min-w-52">
         <SearchBar setResults={setResults}/>

@@ -4,15 +4,14 @@ import { useDebouncedCallback } from 'use-debounce';
 
 
 export default function SearchBar( { setResults } ) {
-    const searchStyle = "block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none"
 
     async function getBooks(value) {
         try {
-            const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${value}+intitle:keyes&key=${process.env.NEXT_PUBLIC_GOOGLE_BOOKS_API_KEY}`);
+            const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${value}&printType=books&keyes&key=${process.env.NEXT_PUBLIC_GOOGLE_BOOKS_API_KEY}`);
             const data = await response.json();
             setResults(data.items);
         } catch (error) {
-            console.log(`Error: ${error.message}`);
+            console.dir(`Error: ${error.message}`);
         };
     };
 
@@ -31,12 +30,9 @@ export default function SearchBar( { setResults } ) {
 
     return(
 
-        <div className="flex items-center">
-            {/* <input type="search" className={searchStyle} placeholder="Search Books..."  value={input} onChange={handleInputChange}/> */}
-            {/* <input type="search" placeholder="Search Books..." className="input input-bordered input-primary w-full max-w-xs" /> */}
-            
+        <div className="flex items-center w-full overflow-clip">
             <label className="input flex items-center gap-2 w-full">
-                <input type="text" className="grow" placeholder="Search Books..." value={input} onChange={handleInputChange} />
+                <input type="search" className="grow" placeholder="Search Books..." value={input} onChange={handleInputChange} />
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 16 16"

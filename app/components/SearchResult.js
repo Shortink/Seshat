@@ -4,7 +4,6 @@ import Image from "next/image";
 export default function SearchResult( {bookObj} ) {
 
     const {selfLink, id, volumeInfo:{title, publishedDate, printType}} = bookObj
-    // const {volumeInfo:{imageLinks:{thumbnail}}} = bookObj
 
 
     const ph = "http://books.google.com/books/content?id=kr09DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"

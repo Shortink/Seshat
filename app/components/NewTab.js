@@ -46,7 +46,7 @@ export default function NewTab() {
 
         {
           bookDisplay.map((book) => (
-            <BookCard bookObj={book} />
+            <BookCard bookObj={book} key={"key"} />
           ))
         }
  

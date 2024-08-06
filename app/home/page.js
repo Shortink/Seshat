@@ -1,13 +1,24 @@
+"use client"
+import { useState } from "react";
 import NavBar from "../components/NavBar";
 import NewTab from "../components/NewTab";
+import SearchResultsList from "../components/SearchResultsList";
 import SlidingHome from "../components/SlidingHome";
 import TrendingTab from "../components/TrendingTab";
 
 
 export default function Page() {
+  const [results, setResults] = useState([])
+  
   return (
     <main className="bg-neutral">
-      <NavBar />
+      <NavBar setResult={setResults} />
+      <div className="">
+      <div className='h-96 w-2/5 absolute ml-[32.5%]'>
+              <SearchResultsList results={results} />
+            </div>
+      </div>
+      
       <div className=" mx-auto mt-2 w-11/12"> <SlidingHome /></div>
       
       <div role="tablist" className="tabs tabs-bordered mt-5">

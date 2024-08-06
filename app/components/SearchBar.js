@@ -30,7 +30,7 @@ export default function SearchBar( { setResults } ) {
 
     return(
 
-        <div className="flex items-center w-full overflow-clip">
+        <div className="flex items-center w-full overflow-clip text-primary">
             <label className="input flex items-center gap-2 w-full">
                 <input type="search" className="grow" placeholder="Search Books..." value={input} onChange={handleInputChange} />
                 <svg
